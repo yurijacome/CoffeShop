@@ -4,21 +4,19 @@ import banner01 from "../../assets/banner01.png";
 export const BannerContainer = styled.div`
     width: 100vw;
     height: 100vh;
-    background-image: url(${banner01});
-    background-size: cover;
-    background-position: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
     .MainContent{
-        display: flex;
-        flex-direction: column;
-        margin-left: 180px;
 
-        width: 500px;
+        width: 100vw;
+        margin-top: 100px;
 
+    }
+    img{
+    
+        width: 100%;
+        height: 80vh;
+        
     }
     h1{
         font-size: 90px;
@@ -32,36 +30,17 @@ export const BannerContainer = styled.div`
 
         margin-top: 20px;
     }
+        
     p{
         font-size: 20px;
         font-weight: 400;
         color: white;
     }
     
-    a {
-        width: 200px;
-        height: 50px;
-
-        margin-top: 30px;
-        margin-left: 20px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
-        border-radius: 5px;
-        border: none;
-        background-color:rgb(36, 14, 1);
-        color: white;
-
-        font-size: 22px;
-        font-weight: 600;
-        text-decoration: none;
 
 
 
-    }
+
 
 
 
