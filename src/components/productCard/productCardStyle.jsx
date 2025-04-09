@@ -5,7 +5,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 width: 300px;
-height: 450px;
+height: 500px;
 background-color: rgb(51, 51, 51);
 
 margin-top: 20px;

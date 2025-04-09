@@ -10,9 +10,9 @@ export const ProductsContainer  = styled.div`
         display: flex;
         flex-wrap: wrap;
         align-self: left;
-        margin-top: 120px;
         margin-left: 20px;
-         overflow-y: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
 
         width: 65vw;
         background-color: rgb(255, 255, 255);

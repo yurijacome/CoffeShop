@@ -8,7 +8,7 @@ const lightTheme = {
   colorOne: "rgb(0, 0, 0)",
   colorTwo: "rgb(255, 255, 255)",
 
-  pallet1: "rgb(255, 0, 0)", 
+  pallet1: "rgb(255, 170, 0)", 
   pallet2: "rgb(255, 61, 0)",
   pallet3: "rgb(255, 136, 0)",
   pallet4: "rgb(255, 174, 0)",
@@ -29,8 +29,8 @@ const darkTheme = {
 
   colorOne: "rgb(255, 255, 255)",
   colorTwo: "rgb(0, 0, 0)",
-
-  pallet1: "rgb(255, 0, 0)", 
+  
+  pallet1: "rgb(255, 170, 0)", 
   pallet2: "rgb(255, 61, 0)",
   pallet3: "rgb(255, 136, 0)",
   pallet4: "rgb(255, 174, 0)",
