@@ -13,8 +13,6 @@ import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { FaSearch } from "react-icons/fa";
 
 
-import { FilterContainer } from "../filterContainer/FilterContainer";
-import {Cart} from "../cart/cart";
 
 
 

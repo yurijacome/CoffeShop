@@ -1,25 +1,16 @@
 import React from "react";
 import { ProductCardContainer } from "./productCardStyle";
 
-export const ProductCard = () => {
-
-
-    return (
-
-        <ProductCardContainer >
-            <img src="a" alt="alt" />
-            <h2>name</h2>
-            <p>description</p>
-            <span>Preço:  R$10,00</span>
-            <button>Add to Cart</button>
-        </ProductCardContainer>
-
-        // <div className="productCard">
-        //     <img src={product.image} alt={product.name} />
-        //     <h2>{product.name}</h2>
-        //     <p>{product.description}</p>
-        //     <p>Price: ${product.price}</p>
-        //     <button>Add to Cart</button>
-        // </div>
-    );
-}
+export const ProductCard = ({ coffee }) => {
+  if (!coffee) return null;
+  return (
+    <ProductCardContainer key={coffee.id}>
+      <img src={coffee.image} alt={coffee.title} />
+      <h2>{coffee.title}</h2>
+      <p>{coffee.description}</p>
+      {/* Preço fictício, pois a API não retorna preço */}
+      <span>Preço: R$10,00</span>
+      <button>Add to Cart</button>
+    </ProductCardContainer>
+  );
+};

@@ -31,7 +31,7 @@ margin-top: 10px;
 }
 
 p {
-font-size: 18px;
+font-size: 12px;
 color: #fff;
 font-weight: 400;
 margin-top: 10px;

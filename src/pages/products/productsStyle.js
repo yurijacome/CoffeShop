@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
-export const ProductsContainer  = styled.div`
+export const ProductsPage  = styled.div`
+
     display: flex;
-    flex-direction: column;    
-    width: 100%;
-    height: 100vh;
+    flex-direction: row;
+    
+
+  
 
     .productsArea {
         display: flex;
@@ -15,7 +17,17 @@ export const ProductsContainer  = styled.div`
         overflow-x: hidden;
 
         width: 65vw;
-        background-color: rgb(255, 255, 255);
+    }
+
+    .seachArea {
+        display: flex;
+        flex-direction: column;
+        align-self: right;
+        margin-right: 20px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        width: 30vw;
     }
 
 `;
