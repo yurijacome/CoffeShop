@@ -39,35 +39,42 @@ export const Cart = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             {(!cart || cart.length === 0) ? (
-              <p>O carrinho está vazio.</p>
-            ) : (
-              <div className="cartItems">
-                {cart.map((item) => (
-                  <CartCard key={item.id}>
-                    <img src={item.image} alt={item.title} />
-                    <div className="cartItemDetails">
-                      <h2>{item.title}</h2>
-                      <p>Preço unitário: R${item.price?.toFixed(2) ?? '10,00'}</p>
-                      <span>Preço total: R${((item.price || 10) * (item.quantity || 1)).toFixed(2)}</span>
-                    </div>
-                    <div className="cartItemActions">
-                      <CustomButtonGroup size="small" aria-label="quantidade do produto">
-                        <Button onClick={() => updateQuantity(item.id, -1)} disabled={(item.quantity || 1) <= 1}>
-                          <RemoveIcon fontSize="small" />
-                        </Button>
-                        <Button disabled>{item.quantity || 1}</Button>
-                        <Button onClick={() => updateQuantity(item.id, 1)}>
-                          <AddIcon fontSize="small" />
-                        </Button>
-                      </CustomButtonGroup>
-                      <button onClick={() => removeItem(item.id)}>
-                        <FaTrash size={20} color="#fff" />
-                      </button>
-                    </div>
-                  </CartCard>
+                <p>O carrinho está vazio.</p>
+                ) : (
+                <div className="cartItems">
+                    {cart.map((item) => (
+                    <CartCard key={item.id}>
+                        <img src={item.image} alt={item.title} />
+                        <div className="cartItemDetails">
+                        <h2>{item.title}</h2>
+                        <p>Preço unitário: R${item.price?.toFixed(2) ?? '10,00'}</p>
+                        <span>Preço total: R${((item.price || 10) * (item.quantity || 1)).toFixed(2)}</span>
+                        </div>
+                        <div className="cartItemActions">
+                        <CustomButtonGroup size="small" aria-label="quantidade do produto">
+                            <Button onClick={() => updateQuantity(item.id, -1)} disabled={(item.quantity || 1) <= 1}>
+                            <RemoveIcon fontSize="small" />
+                            </Button>
+                            <Button disabled>{item.quantity || 1}</Button>
+                            <Button onClick={() => updateQuantity(item.id, 1)}>
+                            <AddIcon fontSize="small" />
+                            </Button>
+                        </CustomButtonGroup>
+                        <button onClick={() => removeItem(item.id)}>
+                            <FaTrash size={20} color="#fff" />
+                        </button>
+                        </div>
+                    </CartCard>
                 ))}
-              </div>
+                </div>
             )}
+            <div className="cartSummary">
+                <h2>Resumo do Pedido</h2>
+                <p>Quantidade total de itens: {cart.reduce((total, item) => total + (item.quantity || 1), 0)}</p>
+                <p>Total: R${cart.reduce((total, item) => total + (item.price || 10) * (item.quantity || 1), 0).toFixed(2)}</p>
+                <Button variant="contained" color="primary" href="/checkout">Finalizar Compra</Button>
+            </div>
+            
           </Offcanvas.Body>
         </CustomOffcanvas>
       </Nav>

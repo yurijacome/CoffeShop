@@ -15,11 +15,10 @@ export const ProductCardContainer = styled.div`
     border-radius: 10px;
 
     img {
-    width: 90%;
+    width: 100%;
     height: 200px;
 
     border-radius: 10px 10px 0 0;
-    margin-top: 10px;
     background-color: rgb(255, 255, 255);
     }
 
@@ -62,12 +61,12 @@ export const ProductCardContainer = styled.div`
 
     &:active {
         background-color: rgb(236, 153, 0);
-        transition: 0.1s;
+        transition: 2.1s;
     }
     }
     button:hover {
 
-    transition: 0.5s;
+    transition: 1.5s;
     transform: scale(1.05);
     }
 

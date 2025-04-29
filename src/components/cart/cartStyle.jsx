@@ -17,6 +17,8 @@ export const CartContainer = styled.button`
         color: rgb(255, 255, 255); 
     }
 
+
+
     
 `
 
@@ -82,22 +84,41 @@ export const CartCard = styled.div`
 `;
 
 export const CustomOffcanvas = styled(Offcanvas)`
-  &.offcanvas {
-    background-color: rgb(236, 173, 0);
-    color: #fff;
-    width: 550px;
-  }
-  .offcanvas-header {
-    background-color: rgb(236, 173, 0);
-    color: #fff;
-  }
-  .offcanvas-title {
-    color: #fff;
-  }
-  .offcanvas-body {
-    background-color: rgb(236, 173, 0);
-    color: #fff;
-  }
+    &.offcanvas {
+        background-color: rgb(20, 20, 20);
+        color: #fff;
+        width: 550px;
+    }
+    .offcanvas-header {
+        background-color: rgb(83, 83, 83);
+        color: #fff;
+    }
+    .offcanvas-title {
+        color: #fff;
+    }
+    .offcanvas-body {
+        background-color: rgb(27, 27, 27);
+        color: #fff;
+    }
+
+    
+    .cartItems{
+    overflow-y: auto;
+    height: 500px;
+    }
+
+    .cartSummary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        width: 100%;
+
+        border-top: 1px solid #fff2;
+
+    }
+
 `;
 
 export const CustomButtonGroup = styled(ButtonGroup)`
